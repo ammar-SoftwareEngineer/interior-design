@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/logo-black.png"
+      type="image/x-icon"
+    />
+
+    <!-- files css -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
+
+    <!-- google font  -->
+
+    <title>Clad Fine</title>
+  </head>
+
+  <body>
+    <!-- 
+  ##################################################
+  #                   Loading                      #
+  ##################################################
+-->
+    <!-- <div class="loading" id="loader"></div> -->
+    <!-- 
+  ##################################################
+  #                   home                         #
+  ##################################################
+-->
+    <header class="header" id="header"></header>
+
+    <div class="hero d-md-block d-none" id="heroDesktop"></div>
+    <div class="hero-mobile d-md-none d-block" id="heroMobile"></div>
+    <!-- 
+  ##################################################
+  #                   About us                     #
+  ##################################################
+-->
+
+    <section
+      class="about-section py-5 animate-section"
+      id="about"
+      style="
+        background: url(./assets/images/about/bg.webp) center/cover no-repeat;
+        background-attachment: fixed;
+      "
+    ></section>
+    <!-- 
+  ##################################################
+  #                    Counter                     #
+  ##################################################
+-->
+
+    <section
+      class="counter-section py-5 animate-section"
+      id="counter"
+    ></section>
+    <!-- 
+  ##################################################
+  #                   Services                     #
+  ##################################################
+-->
+    <section
+      class="services-section py-5 animate-section"
+      id="services"
+      style="
+        background: url(./assets/images/bg.jpg) center/cover no-repeat;
+        background-attachment: fixed;
+      "
+    ></section>
+
+    <!-- 
+  ##################################################
+  #                   Projects                     #
+  ##################################################
+-->
+    <section
+      class="projects-section py-5 animate-section"
+      id="projects"
+    ></section>
+    <!-- 
+##################################################
+#                  Our Partner                   #
+##################################################
+-->
+    <section class="clients-section py-5" id="clients"></section>
+
+    <!-- 
+  ##################################################
+  #                    Blogs                       #
+  ##################################################
+-->
+    <!-- <section class="blogs-section py-5 animate-section" id="blogs"></section> -->
+    <!-- 
+  ##################################################
+  #                   Contact Us                   #
+  ##################################################
+-->
+    <section
+      class="contact-section pt-5 animate-section"
+      id="contact"
+    ></section>
+    <!-- 
+  ##################################################
+  #                  Footer                        #
+  ##################################################
+-->
+    <footer id="footer" class="shadow-lg"></footer>
+
+    <!-- 
+##################################################
+#                  SOCIAL ICONS                  #
+##################################################
+-->
+
+    <div
+      class="social-icon position-fixed bottom-0 d-flex flex-column gap-1 z-3"
+      data-wow-duration="1s"
+    >
+      <a
+        href="tel:010000000000"
+        class="btn d-flex align-items-center justify-content-center"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+      <a
+        href="http://wa.me/+201000000000"
+        target="_blank"
+        class="btn d-flex align-items-center justify-content-center"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <!-- Back To Top start -->
+    </div>
+    <div class="back-to-top">
+      <a id="back-top" class>
+        <i class="fas fa-long-arrow-up"></i>
+      </a>
+    </div>
+
+    <!-- JS -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("#heroDesktop").load("home/hero-desktop.html");
+        $("#heroMobile").load("home/hero-mobile.html");
+        $("#about").load("home/about-section.html");
+        $("#counter").load("home/counter-section.html");
+        $("#services").load("home/services-section.html");
+        $("#projects").load("home/projects-section.html");
+        $("#blogs").load("home/blogs-section.html");
+        $("#clients").load("home/clients-section.html");
+        $("#contact").load("home/contact-section.html");
+        $("#header").load("app/header.html");
+        $("#footer").load("app/footer.html");
+        $("#loader").load("app/loader.html");
+
+        setTimeout(() => {
+          if (typeof animateAllSections === "function") {
+            animateAllSections();
+          }
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
+        }, 500);
+      });
+    </script>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./assets/js/slider.js"></script>
+  </body>
+</html>
