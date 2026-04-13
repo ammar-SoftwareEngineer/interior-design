@@ -40,7 +40,7 @@ function animateSlide(slide) {
           duration: 0.8,
           ease: "back.out(1.7)",
           delay: index * 0.08,
-        }
+        },
       );
     });
 
@@ -53,7 +53,7 @@ function animateSlide(slide) {
         opacity: 1,
         duration: 1.2,
         ease: "power2.out",
-      }
+      },
     );
   });
 }
@@ -79,7 +79,7 @@ function animateAllSections() {
 
   sections.forEach((section) => {
     const items = section.querySelectorAll(
-      ".header-section,li,p,h2,h3,h4,.btn-send,.project-card ,.project-card img h5 .btn-send,.mission p li ,.vision p li,.bg-counter,.service-card .btn-send .service-icon,form,.contact-map,.contact-info-card,.contact-social"
+      ".header-section,li,p,h2,h3,h4,.btn-send,.project-card ,.project-card img h5 .btn-send,.mission p li ,.vision p li,.bg-counter,.service-card .btn-send .service-icon,form,.contact-map,.contact-info-card,.contact-social",
     );
 
     items.forEach((item, index) => {
@@ -98,7 +98,7 @@ function animateAllSections() {
             start: "top 100%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
     // === IMAGE ANIMATIONS ===
@@ -170,3 +170,7 @@ function animateAllSections() {
     }
   });
 }
+
+animateAllSections();
+
+ScrollTrigger.refresh();
